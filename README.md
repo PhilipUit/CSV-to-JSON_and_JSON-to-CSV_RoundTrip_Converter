@@ -4,12 +4,12 @@ In this week, we examined CSV and JSON file formats. We wrote code to manually c
 - > import json
 - > import csv
 
-# Read CSV file. This wouldn't work well for very large files
+### Read CSV file. This wouldn't work well for very large files
 - > with open('data_1/scientists.csv') as f:
 - >    reader = csv.DictReader(f)
 - >    rows = list(reader)
     
-# Write JSON file to disk
+### Write JSON file to disk
 - > with open('data_1/scientists.json', 'w') as f:
 - > json.dump(rows, f)
 ## Part 1
@@ -46,12 +46,12 @@ we will keep this cell RAW and will not run it, as we will use the eager evaluat
 import json
 import csv
 
-# Read CSV file. This wouldn't work well for very large files
+### Read CSV file. This wouldn't work well for very large files
 - > with open('complaints.csv', encoding="UTF-8") as f:
 - >    reader = csv.DictReader(f)
 - >    rows = list(reader)
     
-# Write JSON file to disk
+### Write JSON file to disk
 - >with open('complaints.json', 'w', encoding="UTF-8") as f:
 - >    json.dump(rows, f)
 ### Eager Evaluation
@@ -60,12 +60,12 @@ Using abstraction with the variables -- this makes for easy code to replicate an
 csvFilePath = 'filename.csv'
 jsonFilePath = 'filename.json'
 
-# Read CSV file. 
+### Read CSV file. 
 - > with open(csvFilePath, encoding="UTF-8") as f:
 - >    reader = csv.DictReader(f)
 - >    rows = list(reader)
     
-# Write JSON file to disk
+### Write JSON file to disk
 - > with open(jsonFilePath, 'w', encoding="UTF-8") as f:
 - >    json.dump(rows, f)
 #### Eager Evaluation & Abstraction 
