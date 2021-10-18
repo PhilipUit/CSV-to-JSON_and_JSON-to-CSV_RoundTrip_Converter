@@ -5,14 +5,14 @@ import json
 import csv
 
 # Read CSV file. This wouldn't work well for very large files
-with open('data_1/scientists.csv') as f:
-    reader = csv.DictReader(f)
-    rows = list(reader)
+- > with open('data_1/scientists.csv') as f:
+- >    reader = csv.DictReader(f)
+- >    rows = list(reader)
     
 # Write JSON file to disk
-with open('data_1/scientists.json', 'w') as f:
-    json.dump(rows, f)
-    ## Part 1
+- > with open('data_1/scientists.json', 'w') as f:
+- > json.dump(rows, f)
+## Part 1
 The comment above the CSV section makes an assumption and says it wouldn't work for large files. Use the following articles to understand the terms eager evaluation and lazy evaluation:
 
 https://en.wikipedia.org/wiki/Eager_evaluation
