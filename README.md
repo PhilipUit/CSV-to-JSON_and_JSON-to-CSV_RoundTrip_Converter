@@ -1,8 +1,8 @@
 # CSV_to_JSON_and_JSON_to_CSV_roundtrip_converter
 ###  Description:
 In this week, we examined CSV and JSON file formats. We wrote code to manually convert a specific CSV file to a specific JSON in the process. The code is RAW shown below:
-import json
-import csv
+- > import json
+- > import csv
 
 # Read CSV file. This wouldn't work well for very large files
 - > with open('data_1/scientists.csv') as f:
@@ -47,13 +47,13 @@ import json
 import csv
 
 # Read CSV file. This wouldn't work well for very large files
-with open('complaints.csv', encoding="UTF-8") as f:
-    reader = csv.DictReader(f)
-    rows = list(reader)
+- > with open('complaints.csv', encoding="UTF-8") as f:
+- >    reader = csv.DictReader(f)
+- >    rows = list(reader)
     
 # Write JSON file to disk
-with open('complaints.json', 'w', encoding="UTF-8") as f:
-    json.dump(rows, f)
+- >with open('complaints.json', 'w', encoding="UTF-8") as f:
+- >    json.dump(rows, f)
 ### Eager Evaluation
 ### 1 -- Abstraction -- Generalize the CSV->JSON code above into a function that can work for any CSV file and any JSON file (within reason).
 Using abstraction with the variables -- this makes for easy code to replicate and uses in blocks in the future. this is more efficient and effective to simply adjust the filenames on the top, and then we should never need to adjust them anywhere throughout due to using variables in place of file names. AKA - using eager vs lazy evaluation programming. We see the gerneralized CSV>JSON converted outlined in RAW format in the cell below: (note we will use this a few cells down to demonstrate)
@@ -61,13 +61,13 @@ csvFilePath = 'filename.csv'
 jsonFilePath = 'filename.json'
 
 # Read CSV file. 
-with open(csvFilePath, encoding="UTF-8") as f:
-    reader = csv.DictReader(f)
-    rows = list(reader)
+- > with open(csvFilePath, encoding="UTF-8") as f:
+- >    reader = csv.DictReader(f)
+- >    rows = list(reader)
     
 # Write JSON file to disk
-with open(jsonFilePath, 'w', encoding="UTF-8") as f:
-    json.dump(rows, f)
+- > with open(jsonFilePath, 'w', encoding="UTF-8") as f:
+- >    json.dump(rows, f)
 #### Eager Evaluation & Abstraction 
 Using abstraction with the variables -- this makes for easy code to replicate and uses in blocks in the future. this is more efficient and effective to simply adjust the filenames on the top, and then we should never need to adjust them anywhere throughout due to using variables in place of file names. AKA - using eager vs lazy evaluation programming.
 ## Summary
