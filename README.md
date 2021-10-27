@@ -1,9 +1,10 @@
 # CSV_to_JSON_and_JSON_to_CSV_roundtrip_converter
-#### data source: Consumer Complaint Database data found at https://catalog.data.gov/dataset/consumer-complaint-database#topic=consumer_navigation
 ###  Description:
 In this week, we examined CSV and JSON file formats. We wrote code to manually convert a specific CSV file to a specific JSON in the process. The code is RAW shown below:
 - > import json
 - > import csv
+
+#### Data Source: Consumer Complaint Database data found at https://catalog.data.gov/dataset/consumer-complaint-database#topic=consumer_navigation
 
 ### Read CSV file. This wouldn't work well for very large files
 - > with open('data_1/scientists.csv') as f:
